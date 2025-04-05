@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Move Validator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Game Move Validator</h1>
+        
+        <div class="input-section">
+            <div class="game-board-input">
+                <label for="gameBoard">Game Board (with character position marked as █):</label>
+                <textarea id="gameBoard" rows="8" cols="10"></textarea>
+            </div>
+            
+            <div class="moves-input">
+                <label for="moves">Moves (comma-separated, F=up, L=left, J=right, L=down):</label>
+                <input type="text" id="moves" placeholder="e.g., F,J,F,J">
+            </div>
+            
+            <button onclick="validateMoves()">Validate Moves</button>
+        </div>
+
+        <div class="result-section">
+            <div id="gameBoardDisplay" class="game-board-display"></div>
+            <div id="resultMessage" class="result-message"></div>
+            <div id="coinsCollected" class="coins-collected"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
